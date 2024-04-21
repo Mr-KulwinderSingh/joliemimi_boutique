@@ -16,6 +16,11 @@
     <div class="row">
         <div class="col text-center mt-3">
             <h2 class="logo-font">Products</h2>
+            {% for c in current_categories %}
+            <a class="category-badge text-decoration-none " href="{% url 'products' %}?category={{ c.name }}">
+                <span class="p-2 mt-2 badge badge-white text-black rounded border border-dark">{{ c.friendly_name }}</span>
+            </a>
+            {% endfor %}
            <hr class="w-50 mb-1">
         </div>
     </div>
@@ -42,8 +47,15 @@
                             <div class="row">
                                 <div class="col">
                                     <p class="leads mb-0 text-center font-weight-bold">€{{ product.price }}</p>
+                                    {% if product.category %}
+                                    <p class="small mt-1 mb-0">
+                                        <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                                        <div><i class="fa-solid fa-tags"></i>{{ product.category.friendly_name }}</div>
+                                        </a>
+                                    </p>
+                                    {% endif %}
                                     {% if product.rating %}
-                                    <small class="text-muted"><i class="fas fa-star mr-1">{{ product.rating }} / 5</i></small>
+                                    <small class="text-muted"><i class="fa-regular fa-star mr-1">{{ product.rating }} / 5</i></small>
                                     {% else %}
                                     <small class="text-muted">No Rating</small>
                                     {% endif %}
