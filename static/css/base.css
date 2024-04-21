@@ -11,6 +11,12 @@ body {
     font-family: 'Roboto';
 }
 
+/* Glow effect for home image text */
+.glow {
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 25px #fff, 0 0 30px #fff, 0 0 35px #fff;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
