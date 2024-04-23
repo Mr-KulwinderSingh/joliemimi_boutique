@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Protest+Strike&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+
 html {
     height : 100;
     
 }
 
 body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+    background: url('/media/shop-6.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -32,8 +33,8 @@ body {
 }
 
 .logo-font-custom {
-    font-family: "Protest Strike", sans-serif;
-    text-transform: uppercase;
+    font-family: "Lugrasimo", sans-serif;
+    text-transform: none;
 }
 
 .main-logo-link {
